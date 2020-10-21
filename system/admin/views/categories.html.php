@@ -17,7 +17,7 @@
     <?php foreach ($desc as $d):?>
     <tr>
         <td><a href="<?php echo $d->url;?>" target="_blank"><?php echo $d->title;?></a></td>
-        <td><?php echo $d->body;?></td>
+        <td><?php echo $d->description;?></td>
         <td><?php $total = get_draftcount($d->md) + get_categorycount($d->md); echo $total?></td>
         <td><a href="<?php echo $d->url;?>/edit?destination=admin/categories"><?php echo i18n('Edit');?></a> <?php if (get_categorycount($d->md) == 0 && get_draftcount($d->md) == 0 ){echo '<a href="' . $d->url . '/delete?destination=admin/categories">' . i18n('Delete') . '</a>';}?></td>
     </tr>
